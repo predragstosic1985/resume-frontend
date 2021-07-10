@@ -3,7 +3,6 @@ import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import TextField from "@material-ui/core/TextField";
-import Typography from "@material-ui/core/Typography";
 import MessageIcon from "@material-ui/icons/Message";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
 import { makeStyles } from "@material-ui/core/styles";
@@ -139,18 +138,6 @@ export default function CommentsForm({
       });
   };
 
-  const [anchorEl, setAnchorEl] = useState(null);
-
-  const handlePopoverOpen = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handlePopoverClose = () => {
-    setAnchorEl(null);
-  };
-
-  const open = Boolean(anchorEl);
-
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
@@ -202,8 +189,6 @@ export default function CommentsForm({
             required
             fullWidth
             id="email"
-            onMouseEnter={handlePopoverOpen}
-            onMouseLeave={handlePopoverClose}
             error={inputsError.email ? true : false}
             helperText={
               <FormattedMessage

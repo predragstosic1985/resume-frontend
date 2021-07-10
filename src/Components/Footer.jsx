@@ -5,7 +5,6 @@ import {
   Typography,
   Box,
   IconButton,
-  Hidden,
   withStyles,
   withWidth,
   isWidthUp,
