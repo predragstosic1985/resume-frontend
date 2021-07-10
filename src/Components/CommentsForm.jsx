@@ -3,7 +3,6 @@ import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import TextField from "@material-ui/core/TextField";
-import Popover from "@material-ui/core/Popover";
 import Typography from "@material-ui/core/Typography";
 import MessageIcon from "@material-ui/icons/Message";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
@@ -207,14 +206,10 @@ export default function CommentsForm({
             onMouseLeave={handlePopoverClose}
             error={inputsError.email ? true : false}
             helperText={
-              inputsError.email ? (
-                <FormattedMessage
-                  id="CommentsForm.emailValidation"
-                  defaultMessage="email"
-                />
-              ) : (
-                ""
-              )
+              <FormattedMessage
+                id="CommentsForm.content"
+                defaultMessage="polsacemo vam zahvalnicu"
+              />
             }
             value={comment.email}
             label={
@@ -228,28 +223,6 @@ export default function CommentsForm({
             autoComplete="email"
             autoFocus
           />
-          <Popover
-            id="mouse-over-popover"
-            className={classes.popover}
-            classes={{
-              paper: classes.paper,
-            }}
-            open={open}
-            anchorEl={anchorEl}
-            transformOrigin={{
-              vertical: "top",
-              horizontal: "left",
-            }}
-            onClose={handlePopoverClose}
-            disableRestoreFocus
-          >
-            <Typography>
-              <FormattedMessage
-                id="CommentsForm.content"
-                defaultMessage="polsacemo vam zahvalnicu"
-              />
-            </Typography>
-          </Popover>
           <TextField
             variant="outlined"
             disabled={isLoading}

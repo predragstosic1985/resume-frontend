@@ -82,12 +82,18 @@ const styles = (theme) => ({
     marginBottom: theme.spacing(12),
     [theme.breakpoints.down("md")]: {
       marginBottom: theme.spacing(9),
+      marginRight: theme.spacing(9),
+      width: "auto",
     },
     [theme.breakpoints.down("sm")]: {
       marginBottom: theme.spacing(6),
+      marginRight: theme.spacing(9),
+      width: "auto",
     },
     [theme.breakpoints.down("sm")]: {
       marginBottom: theme.spacing(3),
+      marginRight: theme.spacing(9),
+      width: "auto",
     },
   },
   containerFix: {

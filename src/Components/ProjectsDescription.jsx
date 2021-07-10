@@ -18,6 +18,8 @@ const useStyles = makeStyles((theme) => ({
   heroContent: {
     backgroundColor: theme.palette.background.paper,
     padding: theme.spacing(8, 0, 6),
+    width: "auto",
+    marginRight: "2rem",
   },
   heroButtons: {
     marginTop: theme.spacing(4),
@@ -44,7 +46,7 @@ export default function ProjectsDescription() {
       <main>
         {/* Hero unit */}
         <div className={classes.heroContent}>
-          <Container maxWidth="sm">
+          <Container maxWidth="xs">
             <Typography
               component="h1"
               variant="h2"

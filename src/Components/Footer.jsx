@@ -148,38 +148,37 @@ function Footer(props) {
       <div className={classes.footerInner}>
         <Grid container spacing={isWidthUp("md", width) ? 10 : 5}>
           <Grid item xs={12} md={6} lg={4}></Grid>
-          <Hidden mdDown>
-            <Grid item xs={12} md={6} lg={4}>
-              <Box display="flex" justifyContent="center">
-                <div>
-                  {infos.map((info, index) => (
-                    <Box display="flex" mb={1} key={index}>
-                      <Box mr={2}>
-                        <IconButton
-                          className={classes.infoIcon}
-                          tabIndex={-1}
-                          disabled
-                        >
-                          {info.icon}
-                        </IconButton>
-                      </Box>
-                      <Box
-                        display="flex"
-                        flexDirection="column"
-                        justifyContent="center"
-                      >
-                        <Typography variant="h6" className="text-white">
-                          {info.description}
-                        </Typography>
-                      </Box>
-                    </Box>
-                  ))}
-                </div>
-              </Box>
-            </Grid>
-          </Hidden>
+
           <Grid item xs={12} md={6} lg={4}>
-            <Typography variant="h6" paragraph className="text-white">
+            {infos.map((info, index) => (
+              <Box display="flex" mb={1} key={index}>
+                <Box mr={2}>
+                  <IconButton
+                    className={classes.infoIcon}
+                    tabIndex={-1}
+                    disabled
+                  >
+                    {info.icon}
+                  </IconButton>
+                </Box>
+                <Box
+                  display="flex"
+                  flexDirection="column"
+                  justifyContent="center"
+                >
+                  <Typography variant="h6" className="text-white">
+                    {info.description}
+                  </Typography>
+                </Box>
+              </Box>
+            ))}
+
+            <Typography
+              variant="h6"
+              paragraph
+              className="text-white"
+              style={{ marginTop: "2rem" }}
+            >
               <FormattedMessage
                 id="Footer.network"
                 defaultMessage="social networks"
