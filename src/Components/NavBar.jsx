@@ -111,7 +111,7 @@ export default function PersistentDrawerRight() {
   };
 
   const logutUser = () => {
-    history.push("/login");
+    history.push("/");
   };
 
   const goToProjects = () => {
